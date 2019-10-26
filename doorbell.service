@@ -1,0 +1,12 @@
+[Unit]
+Description=doorbell service
+After=network.target
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/local/bin/doorbell.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
